@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="cal.css" />
+  <title>sample</title>
+</head>
+<body>
+  <div class='result'>
+    <div align='center'>
+      <input type="text" id="result">
+    </div>
+  </div>
+  <div class='calculate'>
+    <div class = 'container' align="center">
+      <input type="button" value="c" onclick="clearText(this)">
+      <input type="button" value="+/-" onclick="hanten()">
+      <input type="button" value="%" onclick="syouhizei()">
+      <input type="button" value="/" onclick="edit(this)">
+    </div>
+    <div class = 'container' align="center">
+      <input type="button" value="7" onclick="edit(this)">
+      <input type="button" value="8" onclick="edit(this)">
+      <input type="button" value="9" onclick="edit(this)">
+      <input type="button" value="*" onclick="edit(this)">
+    </div>
+    <div class = 'container' align="center">
+      <input type="button" value="4" onclick="edit(this)">
+      <input type="button" value="5" onclick="edit(this)">
+      <input type="button" value="6" onclick="edit(this)">
+      <input type="button" value="-" onclick="edit(this)">
+    </div>
+    <div class = 'container' align="center">
+      <input type="button" value="1" onclick="edit(this)">
+      <input type="button" value="2" onclick="edit(this)">
+      <input type="button" value="3" onclick="edit(this)">
+      <input type="button" value="+" onclick="edit(this)">
+    </div>
+    <div class = 'container' align="center">
+      <input type="button" value="0" onclick="edit(this)" class='zero'>
+      <input type="button" value="." onclick="edit(this)">
+      <input type="button" value="=" onclick="calc()">
+    </div>
+  </div>
+  <script language="javascript" type="text/javascript">
+  var result = document.getElementById("result");
+  function edit(elem) {
+    result.value = result.value + elem.value;
+  }
+  function calc() {
+    result.value = new Function("return " + result.value)();
+  }
+  function syouhizei() {
+    result.value = new Function("return " + result.value*1.1)();
+    result.value = Math.floor(result.value)
+  }
+  function hanten() {
+    result.value = new Function("return " + result.value*-1)();
+  }
+  function clearText() {
+    result.value = '';
+  }
+  </script>
+</body>
+</html>

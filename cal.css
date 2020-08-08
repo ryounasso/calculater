@@ -1,0 +1,21 @@
+.result input{
+  width : 10cm;
+}
+
+.zero {
+  width : 5cm !important;
+}
+
+.calculate input {
+  width : 2.5cm;
+  height : 2.5cm;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+html {
+  box-sizing : border-box;
+}

@@ -15,7 +15,7 @@
     <div class = 'container' align="center">
       <input type="button" value="c" onclick="clearText(this)">
       <input type="button" value="+/-" onclick="hanten()">
-      <input type="button" value="%" onclick="syouhizei()">
+      <input type="button" value="%" onclick="calc_tax()">
       <input type="button" value="/" onclick="edit(this)">
     </div>
     <div class = 'container' align="center">
@@ -50,7 +50,7 @@
   function calc() {
     result.value = new Function("return " + result.value)();
   }
-  function syouhizei() {
+  function calc_tax() {
     result.value = new Function("return " + result.value*1.1)();
     result.value = Math.floor(result.value)
   }

@@ -2,7 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <link rel="stylesheet" type="text/css" href="cal.css" />
+  <link rel="stylesheet" type="text/css" href="assets/cal.css" />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
   <title>calculater</title>
 </head>
 <body>
@@ -42,33 +44,10 @@
       <input type="button" value="=" onclick="calc()">
     </div>
     <div id="history">
+      <p>result history</p>
     </div>
   </div>
-  <script language="javascript" type="text/javascript">
-  var result = document.getElementById("result");
-  var his = document.getElementById("history");
-  function edit(elem) {
-    result.value = result.value + elem.value;
-  }
-  let historys = [];
-  var div = document.createElement("div");
-  function calc() {
-    result.value = new Function("return " + result.value)();
-    console.log(result.value);
-    div.innerText = result.value;
-    console.log(div.innerText);
-    his.appendChild(div);
-  }
-  function calc_tax() {
-    result.value = new Function("return " + result.value*1.1)();
-    result.value = Math.floor(result.value)
-  }
-  function hanten() {
-    result.value = new Function("return " + result.value*-1)();
-  }
-  function clearText() {
-    result.value = '';
-  }
+  <script type="text/javascript" src="assets/calculate.js">
   </script>
 </body>
 </html>

@@ -1,0 +1,31 @@
+.result input {
+  width: 9.8cm;
+  height: 2cm;
+}
+
+.zero {
+  width: 5cm !important;
+}
+
+.calculate input {
+  width: 2.5cm;
+  height: 2.5cm;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+#history {
+  text-align: center;
+}
+
+#history p {
+  font-family: "EB Garamond", serif;
+  font-size: 20px;
+}
